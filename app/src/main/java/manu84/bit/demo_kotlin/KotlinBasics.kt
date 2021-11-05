@@ -123,6 +123,61 @@ fun main(){
         counter -= 2
     }
 
+    // for loops
+    for (num in 1..10){
+        print ("$num")
+    }
+
+    for (num in 1 until 8){
+        print("\n$num")
+    }
+    for (num in 10 downTo 2 step 2){
+        println("$num")
+    }
+
+    for (num in 0 until 11){
+        when(num){
+           in 0..9 -> print("$num")
+            10 -> println("It's over 9")
+        }
+    }
+
+    //TODO: Write a while loop that checks the humidity (not the humidityLevel).
+// The variable humidityLevel starts at 80. The variable humidity is initialized with "humid".
+// If it is "humid" then it should reduce the "humidityLevel" by 5 and print "humidity decreased"
+    //Once the humidityLevel is below 60 it should print "it's comfy now" and set the humidity to "comfy"
+
+    var humidityLevel = 80
+    var humidity = "humid"
+    while(humidity == "humid"){
+        humidityLevel -= 5
+        println("Humity is now $humidityLevel")
+        if(humidityLevel <= 60) {
+            println("It's comfy now")
+            humidity = "comfy"
+        }
+
+    }
+
+    //Break and continue
+
+    for (i in 1 until 20){
+        print("$i ")
+        if(i/2 == 5){
+            break
+            //It will print until 10.
+        }
+
+    }
+        println("\nContinue")
+    for (i in 1 until 20){
+        if(i/2 == 5 && i%2 == 0){
+            continue
+            //It will not print 10
+        }
+        print("$i ")
+    }
+
 
 
 
